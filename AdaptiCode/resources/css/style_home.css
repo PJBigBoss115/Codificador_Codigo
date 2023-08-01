@@ -1,0 +1,83 @@
+/* Estilos para el encabezado */
+body {
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+    background-color: #233141;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a93c9;
+    opacity: 0.9;
+    padding: 20px;
+}
+
+.titulo_pagina {
+    display: inline-flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 35px;
+    margin: 10px;
+    color: rgb(15, 161, 15); 
+}
+
+header img {
+    width: 20%;
+    margin: 2px 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3f4d;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Ancho y color de fondo de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #233141;
+}
+
+/* Estilo de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #6a7f8d;
+    border-radius: 5px;
+}
+
+/* Estilo de la barra de desplazamiento cuando se pasa el ratón sobre ella */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3eb7f6;
+}
+
+/* Estilo de la barra de desplazamiento de la pista */
+::-webkit-scrollbar-track {
+    background-color: #233141;
+    border-radius: 5px;
+}
+
+/* Estilo de los botones de desplazamiento (flechas) */
+::-webkit-scrollbar-button {
+    display: none;
+}

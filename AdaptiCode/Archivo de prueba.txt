@@ -1,0 +1,15 @@
+_void _main () {
+	_int a = 5;
+  	_int b = 2;
+	_bool inicio = true;
+  	_if (a < b) {
+
+	--> Otro comentario entre medio del codigo
+  	hasta que este termine en la otra linea <--
+
+		b = a + b;
+		_imprime ( "Hola mundo AdaptiCode..!" );
+  	}
+}
+
+-->Esto es un comentario que se va mostrar <--

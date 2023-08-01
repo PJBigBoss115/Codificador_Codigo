@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaptiCode</title>
+
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/style_home.css">
+    <link rel="stylesheet" href="resources/css/style_formulario.css">
+    <link rel="stylesheet" href="resources/css/style_consola.css">
+    
+    <script src="https://unpkg.com/xregexp/xregexp-all.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="resources/img/code_coding.ico">
+
+    <!--Letras-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Cabecera de la pagina-->
+    <header>
+        <div class="titulo_pagina">
+            <img src="resources/img/Logo_AdaptiCode.png" alt="Logo_AdaptiCode">
+            <h1>IDE</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#salida">Consola</a></li>
+                <li><a href="">Mas aplicaciones</a></li>
+                <li><a href="">Acaerca de..!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Parte de la consola y el editor de codigo-->
+    <main>
+        <section class="editor_texto">
+            <div class="textarea-container">
+                <div id="lineCount" class="line-numbers"></div>
+                <textarea name="editor" class="editor" id="editor" cols="65" rows="20" required placeholder="_imprime ( ''Hello_World..!'' ) ;"></textarea>
+            </div>
+            <div id="lineas">Líneas: 1</div>
+            <div class="botones">
+                <input id="copilar_" class="copilar" type="button" value="Copilar">
+            </div>
+        </section>
+
+        <!--Terminal (Consola) en la cual esta la salida de datos -->
+        <section id="salida" class="tab-container">
+            <div class="tabs">
+                <button class="tab" onclick="changeTab(0)">Salida</button>
+                <button class="tab" onclick="changeTab(1)">Tabla</button>
+                <button class="tab" onclick="changeTab(2)">Problemas</button>
+                <button class="tab" onclick="changeTab(3)">Categorias</button>
+            </div>
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane">
+                    <textarea id="textarea1" class="textarea" placeholder="_" readonly></textarea>
+                </div>
+                <div id="tab2" class="tab-pane">
+                    <!--Creamos la tabla de datos-->
+                </div>
+                <div id="tab3" class="tab-pane">
+                    <textarea id="textarea2" class="textarea" placeholder="No se ha detectado ningún problema en el área de trabajo." readonly></textarea>
+                </div>
+                <div id="tab4" class="tab-pane">
+                    <table>
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Categorias</th>
+                            <th>Codigo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Palabras de Sistema</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Identificadores</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Operadores</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Literales</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Separdores</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Comentarios</td>
+                            <td>10000</td>
+                        </tr>
+                        <!-- Agrega más filas según sea necesario -->
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/resources/script/contadorLinea.js"></script>
+    <script src="/resources/script/lineasActuales.js"></script>
+    <script src="/resources/script/pestañasConsola.js"></script>
+    <script src="/resources/script/analizadorLexico.js"></script>
+</body>
+</html>
